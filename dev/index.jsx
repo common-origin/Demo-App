@@ -46,7 +46,7 @@ var HandsBanner = React.createClass({
   render: function() {
     return (
       <div className="hands-banner">
-        <img src={'img/hatw.png'}/>
+        <a href="http://handsacrossthewater.org.au/" target="_blank"><img src={'img/hatw.png'}/></a>
       </div>
     )
   }

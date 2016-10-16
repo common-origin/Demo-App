@@ -124,7 +124,11 @@
 	    return _react2.default.createElement(
 	      "div",
 	      { className: "hands-banner" },
-	      _react2.default.createElement("img", { src: 'img/hatw.png' })
+	      _react2.default.createElement(
+	        "a",
+	        { href: "http://handsacrossthewater.org.au/", target: "_blank" },
+	        _react2.default.createElement("img", { src: 'img/hatw.png' })
+	      )
 	    );
 	  }
 	});
