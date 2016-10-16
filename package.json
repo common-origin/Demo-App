@@ -1,12 +1,15 @@
 {
-  "name": "demoapp",
+  "name": "fundraiser",
   "version": "1.0.0",
-  "description": "",
+  "description": "a live video feed",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p"
   },
-  "author": "",
+  "author": "sidechain",
   "license": "ISC",
   "dependencies": {
     "babel-core": "^6.17.0",
@@ -26,5 +29,13 @@
   },
   "devDependencies": {
     "react-social-icons": "^2.5.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sidechain-studio/Demo-App.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sidechain-studio/Demo-App/issues"
+  },
+  "homepage": "https://github.com/sidechain-studio/Demo-App#readme"
 }
