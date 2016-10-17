@@ -84,7 +84,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      { className: "button-container col" },
+	      { className: "button-container" },
 	      _react2.default.createElement(
 	        "a",
 	        { href: "https://app.etapestry.com/onlineforms/HandsAcrosstheWater/donate.html", target: "_blank" },
@@ -104,12 +104,7 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      { className: "social-links col" },
-	      _react2.default.createElement(
-	        "h5",
-	        null,
-	        "FOLLOW US ON"
-	      ),
+	      { className: "social-links" },
 	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://www.facebook.com/SabreToothedPortillo" }),
 	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://soundcloud.com/perrymontblanc" }),
 	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://twitter.com/ConcordDawnNZ" })
@@ -139,13 +134,15 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      { className: "presented col" },
+	      null,
+	      _react2.default.createElement(Social, null),
 	      _react2.default.createElement(
-	        "h5",
-	        null,
-	        "PRESENTED BY"
-	      ),
-	      _react2.default.createElement("img", { src: 'img/rubix-logo.png' })
+	        "div",
+	        { className: "presented" },
+	        _react2.default.createElement("img", { className: "rubix-logo", src: 'img/rubix-logo.png' }),
+	        _react2.default.createElement("img", { className: "dope-logo", src: 'img/free-dope-03.png' }),
+	        _react2.default.createElement("img", { className: "clink-logo", src: 'img/clink-logo.png' })
+	      )
 	    );
 	  }
 	});
@@ -156,10 +153,8 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      { className: "footer flex-grid-thirds" },
-	      _react2.default.createElement(Social, null),
-	      _react2.default.createElement(DonateButton, null),
-	      _react2.default.createElement(PresentedBy, null)
+	      { className: "footer" },
+	      _react2.default.createElement(DonateButton, null)
 	    );
 	  }
 	});
@@ -171,8 +166,13 @@
 	    return _react2.default.createElement(
 	      "div",
 	      null,
-	      _react2.default.createElement(VideoEmbed, { iframe: iframe }),
+	      _react2.default.createElement(
+	        "h1",
+	        null,
+	        "MITCH INCOG B2B Mr SECRET"
+	      ),
 	      _react2.default.createElement(HandsBanner, null),
+	      _react2.default.createElement(VideoEmbed, { iframe: iframe }),
 	      _react2.default.createElement(Footer, null)
 	    );
 	  }
@@ -188,11 +188,7 @@
 	      _react2.default.createElement(
 	        "div",
 	        { className: "header" },
-	        _react2.default.createElement(
-	          "h1",
-	          null,
-	          "MITCH INCOG B2B Mr SECRET"
-	        )
+	        _react2.default.createElement(PresentedBy, null)
 	      ),
 	      _react2.default.createElement(
 	        "div",

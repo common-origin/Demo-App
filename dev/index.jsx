@@ -22,7 +22,7 @@ var iframe = '<iframe src="https://www.ustream.tv/embed/22759241?html5ui&autopla
 var DonateButton = React.createClass({
   render: function() {
     return (
-      <div className="button-container col">
+      <div className="button-container">
         <a href="https://app.etapestry.com/onlineforms/HandsAcrosstheWater/donate.html" target="_blank"><button className="donate-btn">CLICK HERE TO DONATE</button></a>
       </div>
     )
@@ -32,8 +32,7 @@ var DonateButton = React.createClass({
 var Social = React.createClass({
   render: function() {
     return (
-      <div className="social-links col">
-        <h5>FOLLOW US ON</h5>
+      <div className="social-links">
         <SocialIcon url="https://www.facebook.com/SabreToothedPortillo" />
         <SocialIcon url="https://soundcloud.com/perrymontblanc" />
         <SocialIcon url="https://twitter.com/ConcordDawnNZ" />
@@ -55,10 +54,14 @@ var HandsBanner = React.createClass({
 var PresentedBy = React.createClass({
   render: function() {
     return (
-      <div className="presented col">
-        <h5>PRESENTED BY</h5>
-        <img src={'img/rubix-logo.png'}/>
-      </div>
+      <div>
+        <Social/>
+        <div className="presented"> 
+          <img className="rubix-logo" src={'img/rubix-logo.png'}/>
+          <img className="dope-logo" src={'img/free-dope-03.png'}/>
+          <img className="clink-logo" src={'img/clink-logo.png'}/>
+        </div>
+      </div>  
     )
   }
 });
@@ -66,10 +69,8 @@ var PresentedBy = React.createClass({
 var Footer = React.createClass({
   render: function() {
     return (
-      <div className="footer flex-grid-thirds">
-        <Social/>
+      <div className="footer">
         <DonateButton/> 
-        <PresentedBy/>
       </div>
     )
   }
@@ -78,9 +79,10 @@ var Footer = React.createClass({
 var Home = React.createClass({
   render: function() {
       return (
-        <div> 
-          <VideoEmbed iframe={iframe} /> 
+        <div>
+          <h1>MITCH INCOG B2B Mr SECRET</h1>
           <HandsBanner/>
+          <VideoEmbed iframe={iframe} /> 
           <Footer/>            
         </div>
       );
@@ -92,7 +94,7 @@ var App = React.createClass({
     return (
       <div>
         <div className="header">
-          <h1>MITCH INCOG B2B Mr SECRET</h1>
+          <PresentedBy/>
         </div>
         <div className="content">
           <Home/>
