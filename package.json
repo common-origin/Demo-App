@@ -4,6 +4,7 @@
   "description": "a live video feed",
   "main": "index.js",
   "scripts": {
+    "start": "node myCode.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sidechain",
