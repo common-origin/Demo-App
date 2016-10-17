@@ -4,7 +4,9 @@
   "description": "a live video feed",
   "main": "index.js",
   "scripts": {
-    "start": "node myCode.js",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
+    "prod": "NODE_ENV=production node server.js",
+    "postinstall": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sidechain",
@@ -17,7 +19,7 @@
     "react": "^15.3.2",
     "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
-    "webpack": "^1.13.2",
+    "webpack": "^1.13.2"
   },
   "babel": {
     "presets": [
