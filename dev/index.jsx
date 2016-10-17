@@ -23,7 +23,7 @@ var DonateButton = React.createClass({
   render: function() {
     return (
       <div className="button-container">
-        <a href="https://app.etapestry.com/onlineforms/HandsAcrosstheWater/donate.html" target="_blank"><button className="donate-btn">CLICK HERE TO DONATE</button></a>
+        <a href="https://app.etapestry.com/onlineforms/HandsAcrosstheWater/donate.html" target="_blank"><button className="donate-btn">DONATE</button></a>
       </div>
     )
   }
@@ -33,9 +33,9 @@ var Social = React.createClass({
   render: function() {
     return (
       <div className="social-links">
-        <SocialIcon url="https://www.facebook.com/SabreToothedPortillo" />
-        <SocialIcon url="https://soundcloud.com/perrymontblanc" />
-        <SocialIcon url="https://twitter.com/ConcordDawnNZ" />
+        <SocialIcon color="white" url="https://www.facebook.com/SabreToothedPortillo" />
+        <SocialIcon color="white" url="https://soundcloud.com/perrymontblanc" />
+        <SocialIcon color="white" url="https://twitter.com/ConcordDawnNZ" />
       </div>
     )
   }  
@@ -54,13 +54,13 @@ var HandsBanner = React.createClass({
 var PresentedBy = React.createClass({
   render: function() {
     return (
-      <div>
-        <Social/>
+      <div className="flex-header">
         <div className="presented"> 
           <img className="rubix-logo" src={'img/rubix-logo.png'}/>
           <img className="dope-logo" src={'img/free-dope-03.png'}/>
           <img className="clink-logo" src={'img/clink-logo.png'}/>
         </div>
+        <Social/>
       </div>  
     )
   }
@@ -70,7 +70,13 @@ var Footer = React.createClass({
   render: function() {
     return (
       <div className="footer">
-        <DonateButton/> 
+         <h3>SPECIAL THANKS TO</h3>
+         <ul>
+          <li><img className="rubix-logo" src={'img/rubix-logo.png'}/></li>
+          <li><img className="dope-logo" src={'img/free-dope-03.png'}/></li>
+          <li><img className="clink-logo" src={'img/clink-logo.png'}/></li>
+          <li><img className="rubix-logo" src={'img/rubix-logo.png'}/></li>
+         </ul>
       </div>
     )
   }
@@ -80,10 +86,9 @@ var Home = React.createClass({
   render: function() {
       return (
         <div>
-          <h1>MITCH INCOG B2B Mr SECRET</h1>
           <HandsBanner/>
           <VideoEmbed iframe={iframe} /> 
-          <Footer/>            
+          <DonateButton/>             
         </div>
       );
     }
@@ -99,6 +104,7 @@ var App = React.createClass({
         <div className="content">
           <Home/>
         </div>
+        <Footer/>
       </div>
     )
   }

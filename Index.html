@@ -10,19 +10,25 @@
 		  margin: 0;
 		}
 		h1, h2, h3, h4, h5, p, ul, li {
-		  font-family: Tahoma, Helvetica, Arial, sans-serif;
+		  font-family: Roboto, Helvetica, Arial, sans-serif;
 		  text-align: center;
 		}
-		.header li {
-		  display: inline;
-		  list-style-type: none;
-		  margin: 0;
+		ul {
+    		list-style: none;
+    		padding: 0;
 		}
 		.header {
 		  padding: 10px;
 		  text-align:center;
 		  color:#fff;
 		  background-color: #000;
+		  position: fixed;
+		  z-index: 1000;
+		}
+		.flex-header {
+			display:flex;
+			align-items: center;
+    		justify-content: center;
 		}
 		.video-container {
 			padding-bottom:56.25%; 
@@ -38,10 +44,10 @@
 		}
 		.content {
 		  background-color: #0c0c0c;
-		  padding: 1vh 15vw 10vh 15vw;
+		  padding: 100px 15vw 10vh 15vw;
 		  margin:auto;
 		  text-align: center;
-		  height:100vh;
+		  height:100%;
 		  color:#fff;
 		}
 		.content h2 {
@@ -64,7 +70,7 @@
     		align-items: center;
 		}
 		.presented img {
-			width: 70%;
+			min-width: 45px;
 			height:auto;
 			display: inline-block;
     		vertical-align: middle;
@@ -76,9 +82,8 @@
 			margin: 5px 0 0 0;
 		}
 		.social-links {
-			position:fixed;
-			top: 15px;
-    		right: 10px;
+			display:flex;
+			justify-content: center;
 		}
 		.social-icon {
 		    margin-right: 8px;
@@ -91,7 +96,7 @@
 			transition: all ease .3s;
 		}
 		.donate-btn {
-			padding:15px;
+			padding:15px 25px;
 			margin-top: 10px;
 			border:solid 2px #000;
 			background-color: #fff;
@@ -114,15 +119,30 @@
 		}
 		.dope-logo {
     		max-width: 3%;
-    		padding: 0 20px;
+    		padding: 0 10px;
 		}	
 		.rubix-logo {
 		    max-width: 5%;
-		    padding: 5px 20px 0 20px;
+		    padding: 5px 10px 0 10px;
 		}
 		.clink-logo {
-			padding: 0 20px;
+			padding: 0 10px;
 			max-width: 5%;
+		}
+		.footer {
+			background-color: #909090;
+    		width: 100%;
+    		height: 100%;
+    		padding: 40px 0;
+		}
+		.footer ul li {
+			display: inline;
+			padding: 0 30px;
+		}
+		.footer h3 {
+			color: #fff;
+			letter-spacing: .2em;
+			padding-bottom: 1em;
 		}
 	</style>
 </head>

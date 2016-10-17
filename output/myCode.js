@@ -91,7 +91,7 @@
 	        _react2.default.createElement(
 	          "button",
 	          { className: "donate-btn" },
-	          "CLICK HERE TO DONATE"
+	          "DONATE"
 	        )
 	      )
 	    );
@@ -105,9 +105,9 @@
 	    return _react2.default.createElement(
 	      "div",
 	      { className: "social-links" },
-	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://www.facebook.com/SabreToothedPortillo" }),
-	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://soundcloud.com/perrymontblanc" }),
-	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { url: "https://twitter.com/ConcordDawnNZ" })
+	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { color: "white", url: "https://www.facebook.com/SabreToothedPortillo" }),
+	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { color: "white", url: "https://soundcloud.com/perrymontblanc" }),
+	      _react2.default.createElement(_reactSocialIcons.SocialIcon, { color: "white", url: "https://twitter.com/ConcordDawnNZ" })
 	    );
 	  }
 	});
@@ -134,15 +134,15 @@
 	  render: function render() {
 	    return _react2.default.createElement(
 	      "div",
-	      null,
-	      _react2.default.createElement(Social, null),
+	      { className: "flex-header" },
 	      _react2.default.createElement(
 	        "div",
 	        { className: "presented" },
 	        _react2.default.createElement("img", { className: "rubix-logo", src: 'img/rubix-logo.png' }),
 	        _react2.default.createElement("img", { className: "dope-logo", src: 'img/free-dope-03.png' }),
 	        _react2.default.createElement("img", { className: "clink-logo", src: 'img/clink-logo.png' })
-	      )
+	      ),
+	      _react2.default.createElement(Social, null)
 	    );
 	  }
 	});
@@ -154,7 +154,35 @@
 	    return _react2.default.createElement(
 	      "div",
 	      { className: "footer" },
-	      _react2.default.createElement(DonateButton, null)
+	      _react2.default.createElement(
+	        "h3",
+	        null,
+	        "SPECIAL THANKS TO"
+	      ),
+	      _react2.default.createElement(
+	        "ul",
+	        null,
+	        _react2.default.createElement(
+	          "li",
+	          null,
+	          _react2.default.createElement("img", { className: "rubix-logo", src: 'img/rubix-logo.png' })
+	        ),
+	        _react2.default.createElement(
+	          "li",
+	          null,
+	          _react2.default.createElement("img", { className: "dope-logo", src: 'img/free-dope-03.png' })
+	        ),
+	        _react2.default.createElement(
+	          "li",
+	          null,
+	          _react2.default.createElement("img", { className: "clink-logo", src: 'img/clink-logo.png' })
+	        ),
+	        _react2.default.createElement(
+	          "li",
+	          null,
+	          _react2.default.createElement("img", { className: "rubix-logo", src: 'img/rubix-logo.png' })
+	        )
+	      )
 	    );
 	  }
 	});
@@ -166,14 +194,9 @@
 	    return _react2.default.createElement(
 	      "div",
 	      null,
-	      _react2.default.createElement(
-	        "h1",
-	        null,
-	        "MITCH INCOG B2B Mr SECRET"
-	      ),
 	      _react2.default.createElement(HandsBanner, null),
 	      _react2.default.createElement(VideoEmbed, { iframe: iframe }),
-	      _react2.default.createElement(Footer, null)
+	      _react2.default.createElement(DonateButton, null)
 	    );
 	  }
 	});
@@ -194,7 +217,8 @@
 	        "div",
 	        { className: "content" },
 	        _react2.default.createElement(Home, null)
-	      )
+	      ),
+	      _react2.default.createElement(Footer, null)
 	    );
 	  }
 	});
