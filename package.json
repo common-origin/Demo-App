@@ -4,7 +4,6 @@
   "description": "a live video feed",
   "main": "index.js",
   "scripts": {
-    "start": "node myCode.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "sidechain",
@@ -18,7 +17,6 @@
     "react-bootstrap": "^0.30.5",
     "react-dom": "^15.3.2",
     "webpack": "^1.13.2",
-    "express": "^4.13.3"
   },
   "babel": {
     "presets": [
